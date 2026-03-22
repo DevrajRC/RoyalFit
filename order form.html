@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Order Form</title>
+     <link rel="icon" href="WhatsApp Image 2026-03-16 at 10.17.12 PM.jpeg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(bg\ order.jpeg);
+            background-size: cover;
+
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            justify-content: center;
+            margin-left: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .footer {
+
+            padding: 40px;
+            background-color: #1D232C;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="form-container">
+        <h2>Order Details</h2>
+        <form action="#" method="post">
+
+            <label for="name"> Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+
+            <label for="email">Quantity:</label>
+            <input type="number" placeholder="Select the Quantity" id="quantity" min="1" required>
+
+            <button onclick="placeOrder()">Order</button>
+
+        </form>
+    </div>
+    <script>
+        function placeOrder() {
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let email = document.getElementById("email").value;
+            let address = document.getElementById("address").value;
+            let quantity = document.getElementById("quantity").value;
+
+            if (name === "" || mobile === "" || email === "" || address === "" || quantity === "") {
+                alert("Please fill all the details");
+            } else {
+                alert("Order Placed Successfully");
+            }
+        }
+    </script>
+    <div class="footer">
+        <div class="footer container">
+            <div class="footerbox-1">
+                <h2 class="headingText-">RoyalFit Men's Fashion</h2>
+                <p>👗 Discover stylish outfits, shoes, and accessories for every occasion.
+                    Upgrade your wardrobe with our modern fashion collections.🛍️ Fashion that defines your personality
+                    and style.
+                    Shop the newest trends and express yourself with confidence.</p>
+                <div class="footer-icon">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                    <p>@2026 RoyalFit Men's Fashion.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
